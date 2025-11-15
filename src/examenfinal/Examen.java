@@ -1,23 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package examenfinal;
 
 /**
  *
- * @author Paul Granados
+ * @author Jonathan Arana
  */
 public class Examen {
    private Integer codigo;
-    private String alimento;
+    private String prod;
     private Integer cantidad;
     private Double precio;
     private Double total;
 
-    public Examen(Integer codigo, String alimento, Integer cantidad, Double precio) {
+    public Examen(Integer codigo, String prod, Integer cantidad, Double precio) {
         this.codigo = codigo;
-        this.alimento = alimento;
+        this.prod = prod;
         this.cantidad = cantidad;
         this.precio = precio;
         this.total = cantidad * precio;
@@ -31,12 +28,12 @@ public class Examen {
         this.codigo = codigo;
     }
 
-    public String getAlimento() {
-        return alimento;
+    public String getprod() {
+        return prod;
     }
 
-    public void setAlimento(String alimento) {
-        this.alimento = alimento;
+    public void setprod(String alimento) {
+        this.prod = prod;
     }
 
     public Integer getCantidad() {

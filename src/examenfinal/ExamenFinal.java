@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package examenfinal;
 
 import java.util.ArrayList;
@@ -10,7 +7,8 @@ import java.util.Scanner;
 
 /**
  *
- * @author Paul Granados
+ * @author Jonathan Arana
+ *
  */
 public class ExamenFinal {
 
@@ -21,20 +19,20 @@ public class ExamenFinal {
         // TODO code application logic here
         List<Examen> listaPedidos = new ArrayList<>();
 
-        String alimento, pregunta;
+        String prod, pregunta;
         Integer codigo, cantidad;
         Double precio;
 
         Scanner lector = new Scanner(System.in);
 
         do {
-            System.out.println("Ingrese el codigo");
+            System.out.println("Ingrese su codigo");
             codigo = lector.nextInt();
 
             lector.nextLine();
 
-            System.out.println("Ingrese el alimento");
-            alimento = lector.nextLine();
+            System.out.println("Ingrese el producto");
+            prod = lector.nextLine();
 
             System.out.println("Ingrese la cantidad");
             cantidad = lector.nextInt();
@@ -44,7 +42,7 @@ public class ExamenFinal {
 
             lector.nextLine();
 
-            listaPedidos.add(new Examen(codigo, alimento, cantidad, precio));
+            listaPedidos.add(new Examen(codigo, prod, cantidad, precio));
 
             System.out.println("Desea continuar? (si/no)");
             pregunta = lector.nextLine();
@@ -52,11 +50,11 @@ public class ExamenFinal {
         } while (pregunta.equalsIgnoreCase("si"));
         System.out.println("\n--- RESUMEN DE PEDIDOS INGRESADOS ---");
         for (Examen pedidoVer : listaPedidos) {
-            System.out.println("CODIGO:   " + pedidoVer.getCodigo());
-            System.out.println("ALIMENTO: " + pedidoVer.getAlimento());
-            System.out.println("CANTIDAD: " + pedidoVer.getCantidad());
-            System.out.println("PRECIO: " + pedidoVer.getPrecio());
-            System.out.println("TOTAL: " + pedidoVer.getTotal());
+            System.out.println("Cdigo:   " + pedidoVer.getCodigo());
+            System.out.println("Prodicto: " + pedidoVer.getprod());
+            System.out.println("Cantidad: " + pedidoVer.getCantidad());
+            System.out.println("Precio: " + pedidoVer.getPrecio());
+            System.out.println("Total: " + pedidoVer.getTotal());
         }
     }
 }
